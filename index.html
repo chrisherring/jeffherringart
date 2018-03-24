@@ -1,0 +1,13 @@
+---
+layout: default
+title: Test Title
+page_name: portfolio
+---
+
+{% for image in site.static_files %}
+    {% if image.path contains 'portfolio/s/' %}
+
+<a data-fancybox="gallery" href="/assets/portfolio/l/{{ image.name }}"><img src="/assets/portfolio/s/{{ image.name }}"></a>
+
+    {% endif %}
+{% endfor %}
